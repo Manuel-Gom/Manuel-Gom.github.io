@@ -1,0 +1,10 @@
+site_name: Manuel Gómez
+nav:
+  - Home: index.md
+  - Tema 1. Configuración e Instalación de Debian: 
+    - Práctica 1: ./daw/tema-1/ssh-debian/index.md
+  - Tema 2. Nginx:
+    - Práctica 1 - Mkdocs: ./daw/tema-2-nginx/mkdocs/index.md
+site_url: https://manuelgomez.com/mi-proyecto-personal
+theme:
+  name: material
