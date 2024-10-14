@@ -5,6 +5,8 @@ nav:
     - Práctica 1: ./daw/tema-1/ssh-debian/index.md
   - Tema 2. Nginx:
     - Práctica 1 - Mkdocs: ./daw/tema-2-nginx/mkdocs/index.md
+    - Práctica 2 - Instalación y configuración: ./daw/tema-2-nginx/ftp-https/index.md
+    - Práctica 3 - Autenticación: ./daw/tema-2-nginx/autenticacion/index.md
 site_url: https://manuelgomez.com/mi-proyecto-personal
 theme:
   name: material

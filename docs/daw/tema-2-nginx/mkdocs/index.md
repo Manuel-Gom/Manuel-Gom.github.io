@@ -1,8 +1,8 @@
-***Tema 1: Instalación y configuración de Debian***
+***Tema 2 - Arquitectura Web. Implantación y administración de servidores web.***
 
 ***Autor: Manuel Gómez Ruiz***
 
-***Fecha: 13/10/2024***
+***Fecha: 14/10/2024***
 
 ***Asignatura: Despliegue de Aplicaciones Web***
 
@@ -70,3 +70,43 @@ Instalamos Visual Studio Code
 **sudo apt install code**
 
 Para ejecutarlo escribe el comando **code**
+
+Una vez redactado tu proyecto utiliza el comando **mkdocs serve**
+
+Este comando se utiliza para iniciar un servidor de desarrollo local y previsualizar el sitio de documentación mientras lo editas.
+
+Luego usa **mkdocs build** que genera los archivos estáticos como HTML, preparándolos para ser desplegados.
+
+Ahora debes de almacenar esa documentación en algún lado, para ello vamos a crear una página web asociada a nuestro GitHub gracias a GitHub Pages, esto hará que cada vez que hagas cambios en tu documentación se actualice automáticamente en GitHub Pages y por lo tanto en tu página web.
+
+Accede a tu GitHub personal y crea un nuevo directorio, el cual debe tener como nombre tu usuario en Github y la siguiente extensión: **usuario-github.github.io**
+
+Una vez creada, en tu Visual crea las carpetas **.github/workflows/ci.yml** dentro de la raíz de tu proyecto (la carpeta docs/ no es la raíz) y añade el script, este archivo configurará GitHub Actions para que cada vez que hagas un push en tu repositorio, construya y despliegue tu sitio de documentación.
+
+Para subir toda nuestra documentación a GitHub primero debemos instalarlo y enlazarlo con nuestro usuario de GitHub:
+
+**sudo apt install git**
+
+**git config –global user.name “tu -usuario”**
+
+**git config –global user.email “tu-correo”**
+
+Realizamos los comandos típicos para subir tus documentos al repositorio.
+
+**git init**
+
+**git remote add origin url-nuevo-repositorio.git**
+
+**git add .**
+
+**git commit -m ‘Nuevo commit’**
+
+**git push -u origin main**
+
+Si es la primera vez que subes contenido en tu GitHub deberás de crear un token de acceso personal, cópialo en algún sitio y no lo pierdes, ya que este será tu clave de acceso a Github, es parecido a la clave de superusuario, es una herramienta para mayor seguridad y evitar así que podamos ser hackeados y borren nuestros repositorios o los modifiquen sin permiso.
+
+Si al subirse los cambios al repositorio, ves que ha habido un problema en el despliegue por Jekyll crea un archivo vacío llamado **.nojekyll**
+
+Ve a **Settings del repositorio > Pages** y comprueba que la rama que está siendo desplegada es **gh-pages** y la ruta es **/ (root)**, si ese no es el caso, modifícalo tú mismo.
+
+Espera unos minutos hasta que se genera tu sitio web.
